@@ -1,0 +1,97 @@
+<div class="container main text ui">
+  <div class="ui grid">
+    <div class="one wide column"></div>
+    <div class="ten wide column">
+      <div class="segment container main ui">
+        <h1>RESTful Routes</h1>
+        <p>A table of all 7 RESTful routes</p>
+      </div>
+      <table class="ui celled table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Path</th>
+            <th>HTTP Verb</th>
+            <th>Purpose</th>
+            <th>Mongoose Method</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Index</td>
+            <td>/blogs</td>
+            <td>GET</td>
+            <td>List all blogs</td>
+            <td>Blog.find()</td>
+          </tr>
+          <tr class="ui inverted green">
+            <td>New</td>
+            <td>/blogs/new</td>
+            <td>GET</td>
+            <td>Show new Blog form</td>
+            <td>N/A</td>
+          </tr>
+          <tr class="ui green inverted">
+            <td>Create</td>
+            <td>/blogs</td>
+            <td>POST</td>
+            <td>Create a new Blog, then redirect somewhere</td>
+            <td>Blog.create()</td>
+          </tr>
+          <tr class="ui blue invertedd">
+            <td>Show</td>
+            <td>/blogs/:id</td>
+            <td>GET</td>
+            <td>Show info about one specific Blog</td>
+            <td>Blog.findById()</td>
+          </tr>
+          <tr class="ui inverted yellow">
+            <td>Edit</td>
+            <td>/blogs/:id/edit</td>
+            <td>GET</td>
+            <td>Show edit form for one Blog</td>
+            <td>Blog.findById()</td>
+          </tr>
+          <tr class="ui inverted yellow">
+            <td>Update</td>
+            <td>/blogs/:id</td>
+            <td>PUT</td>
+            <td>Update particular Blog, then redirect somewhere</td>
+            <td>Blog.findByIdAndUpdate()</td>
+          </tr>
+          <tr class="ui inverted red">
+            <td>Destroy</td>
+            <td>/blogs/:id</td>
+            <td>DELETE</td>
+            <td>Delete a particular Blog, then redirect somewhere</td>
+            <td>Blog.findByIdAndRemove()</td>
+          </tr>
+        </tbody>
+      </table>
+      <hr />
+      <p class="button basic red">Love ❤ You!</p>
+      <hr />
+    </div>
+    <div class="one wide column"></div>
+  </div>
+</div>
+
+<div class="ui divided items">
+  <div class="item">
+    <div class="image">
+      <img src="/images/wireframe/image.png" />
+    </div>
+    <div class="content">
+      <a class="header">Header</a>
+      <div class="meta">
+        <span>Description</span>
+      </div>
+      <div class="description">
+        <p></p>
+      </div>
+      <div class="extra">
+        Additional Details
+      </div>
+    </div>
+  </div>
+</div>

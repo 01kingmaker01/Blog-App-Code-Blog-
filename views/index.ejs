@@ -1,0 +1,30 @@
+<%- include ("partials/header.ejs")%>
+<div class="ui main text container">
+  <div class="ui huge center aligned middle header">Happy Blogging</div>
+  <div class="ui top segment attached">
+    <div class="ui divided items">
+      <% blogs.forEach((blog)=>{ %>
+      <div class="item">
+        <div class="image rounded">
+          <img src="<%=blog.image%>" alt="Image" />
+        </div>
+        <div class="content">
+          <a href="/blogs/<%= blog._id %>" class="header"><%=blog.title%></a>
+          <div class="meta">
+            <span><i><%=blog.date.toDateString()%></i></span>
+          </div>
+
+          <div class="extra">
+            <a
+              class="ui floated violet basic button"
+              href="/blogs/<%= blog._id %> "
+              >Read More<i class="far fa-arrow-alt-circle-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <%}) %>
+    </div>
+  </div>
+</div>
+<%- include ("partials/footer.ejs")%>

@@ -1,0 +1,52 @@
+<%- include ("partials/header.ejs") %>
+
+<div class="ui main test container segment">
+  <div class="huge header ui"><%= showBlog.title %></div>
+  <div class="ui top attached">
+    <div class="item">
+      <img
+        class="ui centered segment rounded image"
+        src="<%= showBlog.image %> "
+        alt="image"
+      />
+
+      <h6 class="ui content">
+        Created - <%= showBlog.date.toDateString() %>
+      </h6>
+      <div class="ui description segment">
+        <p><%- showBlog.body %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui center aligned middle segment" id="letter">
+    <div class="column">
+      <div class="ui form">
+        <form
+          id="delete"
+          action="/blogs/<%= showBlog._id %>?_method=DELETE "
+          method="POST"
+          class="ui stackable grid"
+        >
+          <h3>You want to DELETE your Blog Post?</h3>
+          <button class="ui inverted red button" id="btn">
+            <i class="fas fa-trash-alt"></i> Delete Your Blog
+          </button>
+        </form>
+      </div>
+    </div>
+    <div class="ui horizontal divider">
+      Or
+    </div>
+    <div class="column">
+      <h3>You want to EDIT your Blog Post?</h3>
+      <a
+        id="btn"
+        class="ui inverted green button"
+        href="/blogs/<%= showBlog._id %>/edit "
+        ><i class="far fa-edit"></i> Edit Your Blog</a
+      >
+    </div>
+  </div>
+</div>
+<%- include ("partials/footer.ejs") %>

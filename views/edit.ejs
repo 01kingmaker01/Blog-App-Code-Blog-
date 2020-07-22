@@ -1,0 +1,55 @@
+<%- include ("partials/header.ejs")%>
+<div class="ui main test container segment">
+  <div class="huge header ui left icon">
+    <i class="far fa-edit"> Edit Your Blog</i>
+  </div>
+
+  <form
+    action="/blogs/<%= blog._id %>?_method=PUT "
+    class="ui form"
+    method="POST"
+  >
+    <div class="field">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        name="blog[title]"
+        id="title"
+        placeholder="Title"
+        value="<%= blog.title %> "
+      />
+    </div>
+    <div class="field">
+      <label for="image">Image</label>
+      <div class="ui labeled input">
+        <div class="ui label">
+          http://
+        </div>
+        <input
+          type="url"
+          name="blog[image]"
+          id="image"
+          placeholder="Img Url"
+          value="<%= blog.image %> "
+        />
+      </div>
+    </div>
+    <div class="field">
+      <label for="content">Blog Content</label>
+      <textarea
+        name="blog[body]"
+        id="content mytextarea"
+        placeholder="Blog post goes here..."
+        required
+      >
+<%= blog.body %>
+    </textarea
+      >
+    </div>
+    <button class="ui violet big button">
+      Submit
+    </button>
+  </form>
+</div>
+
+<%- include ("partials/footer.ejs")%>

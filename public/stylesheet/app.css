@@ -32,3 +32,18 @@ i.fa-blog {
 #btn {
   padding: 11px 14px !important;
 }
+
+@media (max-width: 400px) {
+  #home {
+    display: none;
+    background: #fff;
+  }
+  #post {
+    float: right !important;
+    margin-left: auto;
+    padding-right: 26x;
+  }
+  #logo {
+    margin-right: auto;
+  }
+}

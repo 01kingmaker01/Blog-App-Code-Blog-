@@ -74,6 +74,7 @@ app.post('/blogs', (req, res) => {
 
 //Show route
 app.get('/blogs/:id', (req, res) => {
+  console.log(req.params.id);
   Blog.findById(req.params.id, (err, showBlog) => {
     if (err) {
       res.send('404 not found');

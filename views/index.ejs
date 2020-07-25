@@ -13,6 +13,12 @@
           <div class="meta">
             <span><i><%=blog.date.toDateString()%></i></span>
           </div>
+          <div class="description">
+            <p>
+              <%- blog.body.replace(/<\/?[^>]+(>|$)/g, "").substring(0, 100)
+              %>...
+            </p>
+          </div>
 
           <div class="extra">
             <a
